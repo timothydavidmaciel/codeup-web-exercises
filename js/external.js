@@ -5,50 +5,58 @@ alert("Welcome to my website");
 let answer = prompt("What is your favorite color?");
 alert("Great " + answer + " is my favorite color too!")
 
-let littleM = prompt("How many days will you rent 'The Little Mermaid'");
-alert(littleM + " days")
+let littleM = parseFloat(prompt("How many days will you rent 'The Little Mermaid'"));
 
-let brotherBear = prompt("How many days will you rent 'Brother Bear'");
-alert(brotherBear + " days");
+let brotherBear = parseFloat(prompt("How many days will you rent 'Brother Bear'"));
 
-let hercules = prompt("How many days will you rent 'Hercules'");
-alert(hercules + " days");
+let hercules = parseFloat(prompt("How many days will you rent 'Hercules'"));
 
-let movieRent = prompt("How much was the total price that you paid for renting the movies?");
-alert("$" + movieRent);
+alert("One moment while we calculate your total.")
 
-let google = prompt("How much does Google pay you an hour?");
-alert("$" + google);
+let movieRent = littleM + brotherBear + hercules * 3;
+alert("Your total is " + "$" + movieRent);
 
-let amazon = prompt("How much does Amazon pay you an hour?");
-alert("$" + amazon);
+let google = parseFloat(prompt("How much does Google pay you an hour?"));
 
-let facebook = prompt("How much does Facebook pay you an hour?");
-alert("$" + facebook);
+let totalHours = parseFloat(prompt("How many hours did your work?"));
 
-let totalPay = prompt("How much did you make in a week from all three jobs?")
-alert("$" + totalPay);
+let amazon = parseFloat(prompt("How much does Amazon pay you an hour?"));
 
+let totalHours2 = parseFloat(prompt("How many hours did your work?"));
+
+let facebook = parseFloat(prompt("How much does Facebook pay you an hour?"));
+
+let totalHours3 = parseFloat(prompt("How many hours did your work?"));
+alert("One moment while we calculate your total.")
+
+let allHours = (google * totalHours) + (amazon * totalHours2) + (facebook *totalHours3);
+
+totalPay = allHours;
+
+alert("Your total pay is " + "$" + totalPay);
+
+let student = confirm("Can student A enroll in to a class that is 2 hours long?");
 
 function yesOrNo() {
     let yes = "Student A can enroll";
     if(student) {
         return yes;
     } else {
-        return alert("Student A is not able to enroll");
+         return "Student A is not able to enroll";
     }
 }
 
-let student = confirm("Can student A enroll in to a class that is 2 hours long?");
 alert(yesOrNo(student));
 
+let checkout = confirm("The offer can only be applied if two or more has been bought and the offer has not expired. Is the purchase 2 or more and the offer current? 'Please not that this does not apply to premium members");
+
 function offer() {
-    let yes2 = "The offer has been applied"
+    let yes2 = "The offer has been applied";
     if(checkout){
-        return yes2
+        return yes2;
     } else {
-        return alert("The offer was not applied")
+        return "The offer was not applied";
     }
 }
-let checkout = confirm("The offer can only be applied if two or more has been bought and the offer has not expired. Is the purchase 2 or more and the offer current? 'Please not that this does not apply to premium members");
+
 alert(offer(checkout));
