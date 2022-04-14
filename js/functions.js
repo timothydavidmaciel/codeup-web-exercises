@@ -113,8 +113,7 @@
 
     alert("Please let us calculate your total with your discount.")
 
-    let price = random;
-    let discount = random;
+
 
     function applyDiscount(price, discount) {
         let total = price / 100 * discount;
