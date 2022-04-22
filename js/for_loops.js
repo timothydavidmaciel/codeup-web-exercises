@@ -21,11 +21,17 @@
 //         console.log(i);
 // }
 
-for (let i = 1; i < 50; i++) {
-    let answer = parseFloat(prompt("Please enter a odd number between 1 and 50."));
-    if (i === answer) {
-        console.log("Yikes! Skipping number: " + answer);
-    } else if (i % 2 !== 0) {
-       continue console.log("Here is an odd number: " + answer);
-    }
-}
+// for (let i = 0; i < 100; i++) {
+//     let answer = parseFloat(prompt("Please enter a odd number between 1 and 50."));
+//     if (typeof answer === "number") {
+//         break;
+//     }
+// }
+//
+//
+//
+// for (let i = 1; i < 51; i++) {
+//     if (i % 2 !== 0) {
+//         console.log("Here is an odd number: " + i);
+//     }
+
