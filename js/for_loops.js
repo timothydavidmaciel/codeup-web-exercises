@@ -30,8 +30,27 @@
 //
 //
 //
+
+//could not figure this out
+
+// let needsAnswer = Boolean(parseFloat(prompt("Please pick an odd number between 1 and 50")));
+// let hasAnswer = needsAnswer;
+// let needsAnswer2 = confirm("We need a valid input");
+//
+// while (needsAnswer2 === false) {
+//     console.log(needsAnswer);
+//     break;
+// }
+
+
+// for (let i = 1; i < 51; i++) {
+//     if (!needsAnswer === false) {
+//
+//     }
+// }
+
 // for (let i = 1; i < 51; i++) {
 //     if (i % 2 !== 0) {
 //         console.log("Here is an odd number: " + i);
-//     }
-
+//     } if ()
+// }
