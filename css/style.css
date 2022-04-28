@@ -1,4 +1,48 @@
 h1, .fancy-header {
-    color: purple; /* single line comment */
+    /*color: purple;*/
+    color: white;
     text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+}
+
+.h1-h2-color-underline {
+    color: white;
+    text-decoration: underline;
+}
+
+body {
+    background-color: aqua;
+    background-image: url("../../../img/code-back.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+ul {
+    list-style: square;
+}
+
+p, h1, h2 {
+    font-family: sans-serif;
+}
+
+table {
+    padding: 300px;
+    font-size: 100px ;
+}
+
+.divFontColor {
+    color: white;
+}
+
+a:hover {
+    color: limegreen;
+}
+
+.whiteFont {
+    color: white;
 }
