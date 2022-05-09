@@ -2,5 +2,6 @@
     background-image: url("../img/pizza.png");
     height: 346px;
     background-size: cover;
-    ;
+    align-items: center;
+    justify-content: center;
 }
