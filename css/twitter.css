@@ -89,15 +89,17 @@ a {
 }
 
 .timeline {
-float: left;
+    float: left;
     width: 50%;
-    margin: 0 .5em;
+    /*margin: 0 .5em;*/
+    margin-left: 15em;
 }
 
 .who-to-follow {
-    float: left;
+    float: right;
     width: calc(25% - 100px);
-    margin: 0 .5em;
+    /*margin: 0 .5em;*/
+    margin: -1em;
 }
 
 .btn {
