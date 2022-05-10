@@ -2,9 +2,43 @@
     box-sizing: border-box;
 }
 
-.navRow {
+body {
+    margin: 0;
+}
+
+a:hover {
+    color: blue;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 0 .5em;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    background-color: gray;
+}
+
+.container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.logo {
+    margin: 0 auto;
+    padding: .2em 0;
+    font-size: 3em;
+    position: relative;
+    left: -65px;
 
 }
