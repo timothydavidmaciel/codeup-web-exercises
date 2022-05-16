@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Object Model</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .question {
+      padding: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>Lets practice DOM!</h1>
+
+<div class="question">
+  <h1>Question 0</h1>
+  <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<div class="question">
+  <h1>Question 1</h1>
+  <input type="color" id="color">
+  <button type="button" id="changeColor">Button!</button>
+</div>
+
+<div class="question">
+  <h1>Question 2</h1>
+  <input type="text" id="todo">
+  <button type="button" id="addTodo">Add Todo</button>
+  <ul id="todosList">
+  </ul>
+</div>
+
+
+<div class="question">
+  <h1>Question 3</h1>
+  <p>All these H1 Tags should be changing size!</p>
+  <button id="toggleH1">Toggle!</button>
+</div>
+
+<div class="question">
+  <br>
+  <br>
+  <h1>Question 4</h1>
+  <br>
+  <br>
+</div>
+<div class="question">
+  <h1>Question 5</h1>
+  <button id="google">Google</button>
+</div>
+<div class="question">
+  <h1>Question 6</h1>
+  <label for="userInput">Enter String here: </label>
+  <input type="text" id="userInput" placeholder="Enter something to add!">
+  <button id="submitString">Add</button>
+  <p id="madLib">Hello</p>
+</div>
+<script>
+
+  // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
+let firstDiv = document.getElementsByClassName('question')[0]
+let zeroQuestion = prompt('Please tell me your favorite color?');
+firstDiv.style.color = zeroQuestion;
+
+</script>
+</body>
+</html>
