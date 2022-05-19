@@ -70,6 +70,25 @@ let firstDiv = document.getElementsByClassName('question')[0]
 let zeroQuestion = prompt('Please tell me your favorite color?');
 firstDiv.style.color = zeroQuestion;
 
+document.getElementById('changeColor').addEventListener('click', function () {
+  let color = document.getElementById('color').value;
+  document.body.style.backgroundColor = color;
+})
+
+
+  let toDoInput = document.getElementById('todo');
+let toDoList = document.getElementById('todosList');
+let todoBtn = document.getElementById('addTodo');
+
+todoBtn.addEventListener('click', function () {
+  if (toDoInput.value !== "") {
+    let str = "<li>" + toDoInput.value + "</li>";
+    toDoList.innerHTML += str;
+    toDoInput.value = "";
+  }
+})
+
+
 </script>
 </body>
 </html>
