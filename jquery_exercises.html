@@ -22,7 +22,7 @@
 <!--    <li>Test3</li>-->
 <!--</ul>-->
 
-    <h1 id="clickH1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit, quia! Commodi deserunt dolorem eligendi error esse iste, libero, mollitia nobis numquam placeat qui, rerum suscipit tempora vitae voluptates voluptatum.</h1>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit, quia! Commodi deserunt dolorem eligendi error esse iste, libero, mollitia nobis numquam placeat qui, rerum suscipit tempora vitae voluptates voluptatum.</h1>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid architecto consequuntur debitis est fugit inventore ipsam iusto nesciunt nisi optio provident quasi quo repellendus reprehenderit tempore, unde veniam voluptatum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid architecto consequuntur debitis est fugit inventore ipsam iusto nesciunt nisi optio provident quasi quo repellendus reprehenderit tempore, unde veniam voluptatum.</p>
@@ -54,8 +54,8 @@
     // $('li').css('font-size', '20px');
     // $('h1, p, li').css('background', 'yellow');
 
-    $('#clickH1').click(function () {
-        $('#clickH1').css('background', 'blue');
+    $('h1').click(function () {
+        $(this).css('background', 'blue');
     });
 
     $('p').dblclick(function () {
