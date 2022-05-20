@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="css/konami.css">
+</head>
+<body>
+<header><h1 class="text-center FS">Konami Code</h1></header>
+<audio src="music/Guilty%20Gear%20Strive%20-%20Smell%20Of%20The%20Game%20(Main%20Theme).mp3"></audio>
+<br>
+
+<div id="test" class="fight2">
+    <p class="text-center fight FS">Players get ready to fight!</p>
+</div>
+
+<div class="doge dogeI" id="test2">
+    <img src="img/doge.png">
+</div>
+
+<div class="DC DCL" id="test3">
+    <img src="img/dog-catch.png">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    let fightShow = document.getElementsByClassName('fight');
+
+    window.addEventListener("dblclick", event => {
+        const audio = document.querySelector("audio");
+        audio.volume = 0.2;
+        audio.play();
+    });
+
+$('.fight').click(function (){
+    let ft = document.getElementById('test').innerHTML = "<img src='img/fight.png' class='center'>";
+})
+
+    $('.fight2').dblclick(function (){
+        let ft = document.getElementById('test').innerHTML = "";
+    })
+
+    $(document).keyup(function (event) {
+        console.log(event.keyCode);
+    });
+
+    $('.dogeI').click(function (){
+        document.getElementById('test2').innerHTML = "<img src='img/dodge-sam.png' class='center'>";
+        document.getElementById('test3').innerHTML = "<img src='img/dog-catch-half.png'>";
+    })
+
+    let cheatCode = {
+
+        konami: function() {
+            let keyb = [38,38,40,40,37,39,37,39,66,65,13],
+                started = false,
+                count = 0;
+
+            $(document).keydown(function(e){
+                let reset = function() {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+               let key = e.keyCode;
+
+                if(!started){
+                    if(key === 38){
+                        started = true;
+                    }
+                }
+
+                if (started){
+
+                    if (keyb[count] === key){
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count === 11){
+                        document.getElementById('test2').innerHTML = "<img src='img/dodge-sam.png' class='center'>";
+                        document.getElementById('test3').innerHTML = "<img src='img/dog-catch-half.png'>";
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        }
+    }
+
+    cheatCode.konami();
+</script>
+</body>
+</html>
