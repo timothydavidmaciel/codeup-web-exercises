@@ -14,13 +14,27 @@
 <!--    <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, libero, quas. Aperiam dolore, facere ipsa nemo optio praesentium provident, quibusdam rerum similique soluta veritatis vero. Accusantium dolores excepturi ipsa molestiae.</p>-->
 <!--    <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, libero, quas. Aperiam dolore, facere ipsa nemo optio praesentium provident, quibusdam rerum similique soluta veritatis vero. Accusantium dolores excepturi ipsa molestiae.</p>-->
 
-<h1>The Test</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam nam tempore voluptatum! Delectus doloremque ipsa quia. Aspernatur, deserunt, facere hic maiores, natus nulla perferendis quae quibusdam ratione reprehenderit ut voluptatum.</p>
-<ul>
-    <li>Test1</li>
-    <li>Test2</li>
-    <li>Test3</li>
-</ul>
+<!--<h1>The Test</h1>-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam nam tempore voluptatum! Delectus doloremque ipsa quia. Aspernatur, deserunt, facere hic maiores, natus nulla perferendis quae quibusdam ratione reprehenderit ut voluptatum.</p>-->
+<!--<ul>-->
+<!--    <li>Test1</li>-->
+<!--    <li>Test2</li>-->
+<!--    <li>Test3</li>-->
+<!--</ul>-->
+
+    <h1 id="clickH1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit, quia! Commodi deserunt dolorem eligendi error esse iste, libero, mollitia nobis numquam placeat qui, rerum suscipit tempora vitae voluptates voluptatum.</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid architecto consequuntur debitis est fugit inventore ipsam iusto nesciunt nisi optio provident quasi quo repellendus reprehenderit tempore, unde veniam voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid architecto consequuntur debitis est fugit inventore ipsam iusto nesciunt nisi optio provident quasi quo repellendus reprehenderit tempore, unde veniam voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid architecto consequuntur debitis est fugit inventore ipsam iusto nesciunt nisi optio provident quasi quo repellendus reprehenderit tempore, unde veniam voluptatum.</p>
+
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aperiam aspernatur aut dolor ipsam ut velit. Dolor, excepturi ipsam ipsum nostrum quod ratione soluta! At dolorem expedita recusandae veniam.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aperiam aspernatur aut dolor ipsam ut velit. Dolor, excepturi ipsam ipsum nostrum quod ratione soluta! At dolorem expedita recusandae veniam.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aperiam aspernatur aut dolor ipsam ut velit. Dolor, excepturi ipsam ipsum nostrum quod ratione soluta! At dolorem expedita recusandae veniam.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aperiam aspernatur aut dolor ipsam ut velit. Dolor, excepturi ipsam ipsum nostrum quod ratione soluta! At dolorem expedita recusandae veniam.</li>
+    </ul>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -37,8 +51,25 @@
 
     // $('.codeup').css('border', '1px solid red');
 
-    $('li').css('font-size', '20px');
-    $('h1, p, li').css('background', 'yellow');
+    // $('li').css('font-size', '20px');
+    // $('h1, p, li').css('background', 'yellow');
+
+    $('#clickH1').click(function () {
+        $('#clickH1').css('background', 'blue');
+    });
+
+    $('p').dblclick(function () {
+        $('p').css('font-size', '18px');
+    })
+
+    $('li').hover(
+        function() {
+            $(this).css('background', 'red');
+        },
+        function() {
+            $(this).css('background', 'black');
+        }
+    );
 </script>
 </body>
 </html>
