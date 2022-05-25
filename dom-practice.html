@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document Object Model</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-    }
+    <meta charset="UTF-8">
+    <title>Document Object Model</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .question {
-      padding: 10px;
-    }
+        .question {
+            padding: 10px;
+        }
 
-  </style>
+    </style>
 </head>
 
 <body>
@@ -21,81 +21,99 @@
 <h1>Lets practice DOM!</h1>
 
 <div class="question">
-  <h1>Question 0</h1>
-  <p>Lorem ipsum dolor sit amet.</p>
+    <h1>Question 0</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
 </div>
 <div class="question">
-  <h1>Question 1</h1>
-  <input type="color" id="color">
-  <button type="button" id="changeColor">Button!</button>
-</div>
-
-<div class="question">
-  <h1>Question 2</h1>
-  <input type="text" id="todo">
-  <button type="button" id="addTodo">Add Todo</button>
-  <ul id="todosList">
-  </ul>
-</div>
-
-
-<div class="question">
-  <h1>Question 3</h1>
-  <p>All these H1 Tags should be changing size!</p>
-  <button id="toggleH1">Toggle!</button>
+    <h1>Question 1</h1>
+    <input type="color" id="color">
+    <button type="button" id="changeColor">Button!</button>
 </div>
 
 <div class="question">
-  <br>
-  <br>
-  <h1>Question 4</h1>
-  <br>
-  <br>
+    <h1>Question 2</h1>
+    <input type="text" id="todo">
+    <button type="button" id="addTodo">Add Todo</button>
+    <ul id="todosList">
+    </ul>
+</div>
+
+
+<div class="question">
+    <h1>Question 3</h1>
+    <p>All these H1 Tags should be changing size!</p>
+    <button id="toggleH1">Toggle!</button>
+</div>
+
+<div class="question">
+    <br>
+    <br>
+    <h1>Question 4</h1>
+    <br>
+    <br>
 </div>
 <div class="question">
-  <h1>Question 5</h1>
-  <button id="google">Google</button>
+    <h1>Question 5</h1>
+    <button id="google">Google</button>
 </div>
 <div class="question">
-  <h1>Question 6</h1>
-  <label for="userInput">Enter String here: </label>
-  <input type="text" id="userInput" placeholder="Enter something to add!">
-  <button id="submitString">Add</button>
-  <p id="madLib">Hello</p>
+    <h1>Question 6</h1>
+    <label for="userInput">Enter String here: </label>
+    <input type="text" id="userInput" placeholder="Enter something to add!">
+    <button id="submitString">Add</button>
+    <p id="madLib">Hello</p>
 </div>
 <script>
 
-  // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
-let firstDiv = document.getElementsByClassName('question')[0]
-let zeroQuestion = prompt('Please tell me your favorite color?');
-firstDiv.style.color = zeroQuestion;
+    // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
+    let firstDiv = document.getElementsByClassName('question')[0]
+    let zeroQuestion = prompt('Please tell me your favorite color?');
+    firstDiv.style.color = zeroQuestion;
 
-document.getElementById('changeColor').addEventListener('click', function () {
-  let color = document.getElementById('color').value;
-  document.body.style.backgroundColor = color;
-})
+    document.getElementById('changeColor').addEventListener('click', function () {
+        let color = document.getElementById('color').value;
+        document.body.style.backgroundColor = color;
+    })
 
 
-  let toDoInput = document.getElementById('todo');
-let toDoList = document.getElementById('todosList');
-let todoBtn = document.getElementById('addTodo');
+    let toDoInput = document.getElementById('todo');
+    let toDoList = document.getElementById('todosList');
+    let todoBtn = document.getElementById('addTodo');
 
-todoBtn.addEventListener('click', function () {
-  if (toDoInput.value !== "") {
-    let str = "<li>" + toDoInput.value + "</li>";
-    toDoList.innerHTML += str;
-    toDoInput.value = "";
-  }
-})
+    todoBtn.addEventListener('click', function () {
+        if (toDoInput.value !== "") {
+            let str = "<li>" + toDoInput.value + "</li>";
+            toDoList.innerHTML += str;
+            toDoInput.value = "";
+        }
+    })
 
-  function changePX() {
-  if ($('h1').css('font-size', '10px') === true) {
-    return $('h1').css('font-size', '20px');
-  } else {
-    return $('h1').css('font-size', '10px');
-  }
 
-  }
+    const toggleBtn = document.getElementById("toggleH1");
+
+    function toggleFontSize() {
+        let h1s = document.getElementsByTagName("h1");
+        for (let h1 of h1s) {
+            if (h1.style.fontSize !== "10px") {
+                h1.style.fontSize = "10px";
+            } else {
+                h1.style.fontSize = "20px";
+            }
+        }
+    }
+
+    let h1IntervalId = setInterval(toggleFontSize, 1000);
+
+    toggleBtn.addEventListener("click", function () {
+        if (h1IntervalId === null) {
+            h1IntervalId = setInterval(toggleFontSize, 1000);
+        } else {
+            clearInterval(h1IntervalId);
+            h1IntervalId = null;
+        }
+    });
+
+
 
 </script>
 </body>

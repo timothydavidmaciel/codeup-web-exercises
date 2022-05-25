@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- CSS only -->
     <link rel="stylesheet" href="css/jquery_faq.css">
 </head>
 <body>
@@ -10,7 +11,7 @@
     <h1 style="text-align: center">10 FAQs about national parks!</h1>
 </header>
 <dl>
-    <dt class="visible">1. Back In The Day:</dt>
+    <dt>1. Back In The Day:</dt>
     <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks, was founded in 1916 when President Woodrow Wilson signed the Organic Act. However, the first national park was created many years earlier, when Congress passed an act establishing Yellowstone National Park in 1872.</dd>
 
     <dt>2. Numbers Don’t Lie:</dt>
@@ -42,13 +43,64 @@
 
 </dl>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<h3>Arches National Park</h3>
+<ul>
+    <li>The longest arch in Arches National Park is Landscape Arch, at 306 feet. It can be found about a mile down the trail in the Devil’s Garden area.</li>
+    <li>The tallest arch in Arches National Park is the south arch of Double Arch, at 144 feet. It can be found at the end of a very short trail in the Windows area.</li>
+    <li>Over 2,000 arches have been discovered and recorded in Arches National Park. This number changes, as new arches are discovered and others collapse.</li>
+    <li>The park was first created as Arches National Monument on April 12, 1929, 42 years before it was elevated to national park status.</li>
+</ul>
+
+<h3>Big Bend National Park</h3>
+<ul>
+    <li>You can check the different kinds of artifacts in Big Bend National Park.   Some of them were dated back 9,000 years old ago. The visitors can find out a wide range of Cretaceous and Cenozoic fossil organisms.</li>
+    <li>If you look at the pictures of Big Bend National Park, you know that it has the harsh desert environment.  However, the species of plants and animals in the park are abundant.</li>
+    <li>The people who love to enjoy the animal life in the park should scrutinize it at night. During the day, the animal life is not seen. When the night comes, many animals come out of their nest to search for food.</li>
+    <li>Some animals that you can spot in Big Bend National Park include golden eagle, Mexican black bears, cougar, coyote, greater roadrunner, collared peccary, kangaroo rat, black-tailed jackrabbit and many more.</li>
+</ul>
+
+<h3>Canyonlands National Park</h3>
+<ul>
+    <li>Canyonlands National Park covers a total area of 337,598 acres</li>
+    <li>Canyonlands was made a national park on September 12, 1964</li>
+    <li>The entrance fee for Canyonlands is $30 per vehicle per week</li>
+    <li>Canyonlands National Park lies in the Mountain time zone</li>
+</ul>
+
+<h3>Death Valley</h3>
+<ul>
+    <li>The highest recorded temperature in the world was recorded in Death Valley’s Furnace Creek at 134 Fahrenheit in July 1913. For almost one hundred years, a false recording made in Libya overshadowed Furnace Creek’s claim to fame. In 2012, however, the record went back to Death Valley after it was concluded that the Libyan recording was made in error.</li>
+    <li>Death Valley is the driest place in the country. In 1929, there was not a single drop of rain recorded in Death Valley.</li>
+    <li>Life abounds in Death Valley! The Park is home to more than 1000 species of plants (including 50 that are found nowhere else in the world), 300 species of birds, 51 species of mammals (including bighorn sheep and mountain lions), 36 species of reptiles and a handful of amphibian and fish species.</li>
+    <li>Humans are also fond of Death Valley. Archaeologists have found evidence of the human presence in Death Valley that dates back at least 9,000 years! The Timbisha Shoshone Native American Tribe has inhabited Death Valley for the past 1,000 years.</li>
+</ul>
+
+<button type="button" class="btnYellow">Click Me!</button>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 <script>
 
     $("dt").click(function () {
         $('dd').toggleClass("visible");
     });
+
+
+    $(".btnYellow").click(function () {
+        $("ul").each(function () {
+            $(this).children().last().css('background-color', 'yellow');
+        })
+    })
+
+    $('h3').click(function (){
+        $(this).next().children().css('font-weight', 'bold');
+    })
+
+    $('ul').click(function () {
+        $(this).children().first().css('color', 'blue');
+    })
 
 </script>
 </body>
