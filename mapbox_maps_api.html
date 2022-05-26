@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+</head>
+<body>
+<div id='map' style='width: 95vw; height: 75vh; margin: auto;'></div>
+<script src="js/keys.js"></script>
+<script src="js/geocode.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_KEY_API;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 10.5// starting zoom
+    });
+
+    // geocode("3020 Commercial Ave #2242, San Antonio, TX 78221", MAPBOX_KEY_API).then(function (info) {
+    //     const POPUP_MEXFOOD = new mapboxgl.Popup()
+    //         .setLngLat(info)
+    //         // .setHTML("<p>This is where the Rockets play!</p>")
+    //         .addTo(map);
+    // });
+
+    // Create a new marker.
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.515938, 29.346812])
+    //     .addTo(map);
+    //
+    // map.on('click', function () {
+    //     const placePOPUP = new mapboxgl.Popup()
+    //         .setLngLat([-98.515938, 29.346812])
+    //         .setHTML("<p>Angelica's 2</p>")
+    //         .addTo(map);
+    // })
+    //
+    // marker.setPopup(placePOPUP);
+
+    let places = [
+        {
+            name: "Angelica's 2",
+            coordinates: [-98.515938, 29.346812]
+        }, {
+            name: "Big Lou's Pizza",
+            coordinates: [-98.404062, 29.394312]
+        }, {
+            name: "Stone Werks Big Rock Grille, The Rim",
+            coordinates: [-98.599063, 29.613312]
+        }
+    ];
+
+    places.forEach(function (place) {
+        let marker = new mapboxgl.Marker()
+            .setLngLat(place.coordinates)
+            .addTo(map)
+
+        let POPUP = new mapboxgl.Popup()
+            .setLngLat(place.coordinates)
+            .setHTML(place.name)
+            .addTo(map)
+
+    })
+
+
+    // places.forEach(function(place) {
+    //     let POPUP = new mapboxgl.Popup()
+    //         .setLngLat(place.coordinates)
+    //         .setHTML(place.name)
+    //         .addTo(map)
+    // })
+    //
+    // map.on('click', function (place) {
+    //     const placePOPUP = new mapboxgl.Popup()
+    //         .setLngLat(place.coordinates)
+    //         .setHTML(place.name)
+    //         .addTo(map);
+    // })
+    //
+    // marker.setPopup(placePOPUP);
+
+</script>
+</body>
+</html>
