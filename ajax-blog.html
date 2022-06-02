@@ -1,10 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 </head>
 <body>
 
+<!-- Start Top Bar -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text">Blog</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact Me</a></li>
+            <li><a href="#">Cool Stuff</a></li>
+        </ul>
+    </div>
+</div>
+<!-- End Top Bar -->
+
+<div class="callout large primary">
+    <div class="row column text-center">
+        <h1>My Blog</h1>
+        <h2 class="subheader">Stuff on my mind</h2>
+    </div>
+</div>
+
+<div id="post">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+    $(document).foundation();
+</script>
+<script>
+    $('#post').html('');
+    $.get("data/blog.json", {
+    }).done(function (data) {
+        data.forEach(function (item){
+            $('#insertProducts').append('<div></div>');
+            $('div').last().append('<p>' + item.title + '</p>');
+            $('div').last().append('<p>' + item.content + '</p>');
+            $('div').last().append('<p>' + item.categories + '</p>');
+            $('div').last().append('<p>' + item.date + '</p>');
+        })
+    });
+</script>
 </body>
 </html>

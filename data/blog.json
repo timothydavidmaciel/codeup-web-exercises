@@ -16,5 +16,12 @@
             "sugar"
         ],
         "date": "February 14, 2015"
-    }
+    }, {
+    "title": "The Third Post",
+    "content": "THis is my random post. This is just a test",
+    "categories": [
+        "random"
+    ],
+    "date": "June 02, 2022"
+}
 ]
