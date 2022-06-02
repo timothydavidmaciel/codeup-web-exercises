@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Chainsaw",
+    "quantity": 15,
+    "categories": [
+      "tool",
+      "gas"
+    ],
+    "price": 150
+  }
+]
