@@ -3,12 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>Some Weather Map</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
-<div class="test">
-<div class="test2"></div>
+<!--might need below-->
+
+<!--<div class="test">-->
+<!--<div class="test2"></div>-->
+<!--</div>-->
+<header>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Not Another Weather App</li>
+                <li id="currentCity" class="is-active"></li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><input type="search" placeholder="Search for another city"></li>
+                <li><button type="button" class="button">Search</button></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<br>
+
+<div class="grid-x grid-padding-x align-spaced">
+<!--    First Card-->
+    <div class="card cell small-2" style="width: 275px;">
+        <div class="card-divider">
+            Monday
+        </div>
+<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
+        <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>test</p>
+        </div>
+    </div>
+<!--    Second Card-->
+    <div class="card cell small-2" style="width: 275px;">
+        <div class="card-divider">
+            Tuesday
+        </div>
+<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
+        <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>Test</p>
+        </div>
+    </div>
+<!--    Third Card-->
+    <div class="card cell small-2" style="width: 275px;">
+        <div class="card-divider">
+            Wednesday
+        </div>
+<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
+        <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>Test</p>
+        </div>
+    </div>
+<!--    Fourth Card-->
+    <div class="card cell small-2" style="width: 275px;">
+        <div class="card-divider">
+            Thursday
+        </div>
+<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
+        <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>Test</p>
+        </div>
+    </div>
+<!--    Fifth Card-->
+    <div class="card cell small-2" style="width: 275px;">
+        <div class="card-divider">
+            Friday
+        </div>
+<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
+        <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>Test</p>
+        </div>
+    </div>
 </div>
 
+<div id='map' style='width: 95vw; height: 75vh; margin: auto;'></div>
+<!-- Compressed JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
 <script src="js/weather_map.js"></script>
