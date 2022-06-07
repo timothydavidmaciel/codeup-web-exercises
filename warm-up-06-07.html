@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const url = "https://quotes.rest/qod"
+   let data = fetch(url).then(res => res.json()).then((myData) => {console.log(myData);})
+</script>
+</body>
+</html>
