@@ -14,22 +14,49 @@
 
 // Weather info for San Antonio, Tx
 
-$(document).ready(() => {
+
     // change below
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
+    let weatherData = $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: OPEN_WEATHER_KEY,
         units: "imperial",
-        q:     "San Antonio, US"
-    }).done(function(data) {
-        console.log(data);
-    });
-    // change above
-})
+        lat:     29.4252,
+        lon: -98.4946
+    }).then((data) => {
+        let weatherCards = "";
+        for (let i = 0; i < 5; i++) {
+          weatherCards +=   `
+            <div>
+            <h6>Temp: ${data.daily[i].temp.day}</h6>
+</div>
+            `}
+        document.getElementById("5Day").innerHTML = weatherCards;
+    })
+
+
+
+
+
+// let places = "";
+//
+// places.forEach(function (place) {
+//
+//     let POPUP = new mapboxgl.Popup()
+//         .setLngLat(place.coordinates)
+//         .setHTML(place.name)
+//         .addTo(map)
+//
+//     let marker = new mapboxgl.Marker()
+//         .setLngLat(place.coordinates)
+//         .setPopup(POPUP)
+//         .addTo(map)
+// })
 
 // Changes the current city
 
-// document.getElementById("currentCity").innerHTML = "<a>Current City : Place Holder</a>"
+document.getElementById("currentCity").innerHTML = "<a>Current City : Place Holder</a>"
 
+// look at geocode api
+//can use a diffrent geocode api
 mapboxgl.accessToken = MAPBOX_KEY_API;
 
 const map = new mapboxgl.Map({

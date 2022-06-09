@@ -9,6 +9,8 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
+
+<!--use og geocode ulti for the search to poulate the data that I need, make sure to target the marker on the map, still make it draggable -->
 <!--might need below-->
 
 <!--<div class="test">-->
@@ -33,63 +35,64 @@
 
 <br>
 
-<div class="grid-x grid-padding-x align-spaced">
-<!--    First Card-->
-    <div class="card cell small-2" style="width: 275px;">
-        <div class="card-divider">
-            Monday
-        </div>
-<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
-        <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>test</p>
-        </div>
-    </div>
-<!--    Second Card-->
-    <div class="card cell small-2" style="width: 275px;">
-        <div class="card-divider">
-            Tuesday
-        </div>
-<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
-        <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>Test</p>
-        </div>
-    </div>
-<!--    Third Card-->
-    <div class="card cell small-2" style="width: 275px;">
-        <div class="card-divider">
-            Wednesday
-        </div>
-<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
-        <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>Test</p>
-        </div>
-    </div>
-<!--    Fourth Card-->
-    <div class="card cell small-2" style="width: 275px;">
-        <div class="card-divider">
-            Thursday
-        </div>
-<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
-        <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>Test</p>
-        </div>
-    </div>
-<!--    Fifth Card-->
-    <div class="card cell small-2" style="width: 275px;">
-        <div class="card-divider">
-            Friday
-        </div>
-<!--        <img src="assets/img/generic/rectangle-1.jpg">-->
-        <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>Test</p>
-        </div>
-    </div>
-</div>
+<div id="5Day"></div>
+<!--<div class="grid-x grid-padding-x align-spaced">-->
+<!--&lt;!&ndash;    First Card&ndash;&gt;-->
+<!--    <div class="card cell small-2" style="width: 275px;">-->
+<!--        <div class="monday card-divider">-->
+<!--            Monday-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
+<!--        <div class="card-section">-->
+<!--            <h4>This is a card.</h4>-->
+<!--            <p>test</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    Second Card&ndash;&gt;-->
+<!--    <div class="card cell small-2" style="width: 275px;">-->
+<!--        <div class="card-divider">-->
+<!--            Tuesday-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
+<!--        <div class="card-section">-->
+<!--            <h4>This is a card.</h4>-->
+<!--            <p>Test</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    Third Card&ndash;&gt;-->
+<!--    <div class="card cell small-2" style="width: 275px;">-->
+<!--        <div class="card-divider">-->
+<!--            Wednesday-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
+<!--        <div class="card-section">-->
+<!--            <h4>This is a card.</h4>-->
+<!--            <p>Test</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    Fourth Card&ndash;&gt;-->
+<!--    <div class="card cell small-2" style="width: 275px;">-->
+<!--        <div class="card-divider">-->
+<!--            Thursday-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
+<!--        <div class="card-section">-->
+<!--            <h4>This is a card.</h4>-->
+<!--            <p>Test</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    Fifth Card&ndash;&gt;-->
+<!--    <div class="card cell small-2" style="width: 275px;">-->
+<!--        <div class="card-divider">-->
+<!--            Friday-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
+<!--        <div class="card-section">-->
+<!--            <h4>This is a card.</h4>-->
+<!--            <p>Test</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <div id='map' style='width: 95vw; height: 75vh; margin: auto;'></div>
 <!-- Compressed JavaScript -->
