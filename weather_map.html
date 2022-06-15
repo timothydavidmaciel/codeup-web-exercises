@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Some Weather Map</title>
-    <!-- Compressed CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
 </head>
 <body>
 
@@ -17,88 +19,30 @@
 <!--<div class="test2"></div>-->
 <!--</div>-->
 <header>
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text">Not Another Weather App</li>
-                <li id="currentCity" class="is-active"></li>
-            </ul>
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Some Weather Map</a>
+            <div id="testCity"></div>
+<!--            <form class="d-flex" role="search">-->
+<!--                <input id="geocoder" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                <button id="geocoder" class="btn btn-outline-dark" type="submit">Search</button>-->
+<!--            </form>-->
         </div>
-        <div class="top-bar-right">
-            <ul class="menu">
-                <li><input type="search" placeholder="Search for another city"></li>
-                <li><button type="button" class="button">Search</button></li>
-            </ul>
-        </div>
-    </div>
+    </nav>
 </header>
 
 <br>
 
+<div id="CurrentDay"></div>
 <div id="5Day"></div>
-<!--<div class="grid-x grid-padding-x align-spaced">-->
-<!--&lt;!&ndash;    First Card&ndash;&gt;-->
-<!--    <div class="card cell small-2" style="width: 275px;">-->
-<!--        <div class="monday card-divider">-->
-<!--            Monday-->
-<!--        </div>-->
-<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
-<!--        <div class="card-section">-->
-<!--            <h4>This is a card.</h4>-->
-<!--            <p>test</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--&lt;!&ndash;    Second Card&ndash;&gt;-->
-<!--    <div class="card cell small-2" style="width: 275px;">-->
-<!--        <div class="card-divider">-->
-<!--            Tuesday-->
-<!--        </div>-->
-<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
-<!--        <div class="card-section">-->
-<!--            <h4>This is a card.</h4>-->
-<!--            <p>Test</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--&lt;!&ndash;    Third Card&ndash;&gt;-->
-<!--    <div class="card cell small-2" style="width: 275px;">-->
-<!--        <div class="card-divider">-->
-<!--            Wednesday-->
-<!--        </div>-->
-<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
-<!--        <div class="card-section">-->
-<!--            <h4>This is a card.</h4>-->
-<!--            <p>Test</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--&lt;!&ndash;    Fourth Card&ndash;&gt;-->
-<!--    <div class="card cell small-2" style="width: 275px;">-->
-<!--        <div class="card-divider">-->
-<!--            Thursday-->
-<!--        </div>-->
-<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
-<!--        <div class="card-section">-->
-<!--            <h4>This is a card.</h4>-->
-<!--            <p>Test</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--&lt;!&ndash;    Fifth Card&ndash;&gt;-->
-<!--    <div class="card cell small-2" style="width: 275px;">-->
-<!--        <div class="card-divider">-->
-<!--            Friday-->
-<!--        </div>-->
-<!--&lt;!&ndash;        <img src="assets/img/generic/rectangle-1.jpg">&ndash;&gt;-->
-<!--        <div class="card-section">-->
-<!--            <h4>This is a card.</h4>-->
-<!--            <p>Test</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
+<br>
 <div id='map' style='width: 95vw; height: 75vh; margin: auto;'></div>
-<!-- Compressed JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+
+<!--JS-->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
 <script src="js/weather_map.js"></script>
+<!--JS-->
 </body>
 </html>
